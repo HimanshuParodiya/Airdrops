@@ -1,0 +1,87 @@
+/* --------------------------------------------------------------       utils */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    background-color: #F3F7FA;
+    height: 100vh;
+}
+
+/* --------------------------------------------------------------       Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+
+}
+
+nav .logo {
+    width: 150px;
+}
+
+nav .logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.navbar__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+}
+
+.navbar__left .navbar__menu .navbar__menu__ul {
+    display: flex;
+}
+
+.navbar__left .navbar__menu .navbar__menu__ul .navbar__menu__a {
+    font-size: 2rem;
+    margin: 0 2rem;
+    color: black;
+}
+
+.navbar__left .navbar__menu .navbar__menu__ul .navbar__menu__a:hover {
+    color: #5C8EC2;
+}
+
+.navbar__back__button {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    margin-right: 3rem;
+    border-radius: 3rem;
+    background-color: #F89E52;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar__back__button:hover {
+    box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__back__button a {
+    color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------            Main */
