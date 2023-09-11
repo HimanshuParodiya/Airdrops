@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 :root {
@@ -21,6 +22,8 @@ li {
 .container {
     background-color: #F3F7FA;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 /* --------------------------------------------------------------       Navbar */
@@ -85,3 +88,184 @@ nav .logo img {
 }
 
 /* --------------------------------------------------------------            Main */
+
+.container main {
+    max-width: 120rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+
+.seachbar {
+    height: 5rem;
+    position: relative;
+
+}
+
+.seachbar input {
+    width: 80%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom-left-radius: 5rem;
+    border-top-left-radius: 5rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+    border: 1px solid #000;
+    border-right: 0;
+}
+
+.search__button {
+    margin-left: -0.23rem;
+    height: 100%;
+    width: 10%;
+    outline: none;
+    border: none;
+    background: #F89E52;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+    border: 1px solid #000;
+}
+
+.search__button i {
+    margin-left: 3rem;
+}
+
+
+/* -------------   account */
+
+.account__data {
+    margin-top: 5rem;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #49494A;
+    margin: 3rem auto 0 auto;
+    padding: 2rem 0;
+    border-radius: 2rem;
+    color: #FFFFFF;
+
+}
+
+
+
+/* -------------   user Data */
+
+.userData {
+    /* width: 80%; */
+    margin: 5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.userData__container {
+    flex: 0.3;
+    height: 20rem;
+    border-radius: 2rem;
+    background-color: #49494A;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.userData__heading {
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.userData__data {
+    font-size: 3rem;
+    color: #5C8EC2;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.userData_data_currency {
+    color: #FFFFFF;
+    margin-right: 0.5rem;
+}
+
+
+/* ------------- user balance activity */
+
+.user__balance__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.user__balance__activity__box {
+    background-color: #49494A;
+    flex: 0.45;
+    height: 250px;
+    border-radius: 2rem;
+}
+
+.user__balance__activity__heading {
+    font-size: 2.4rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-top: 2rem;
+
+}
+
+.user__balance__activity__underline {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.user__balance__currency_conatiner {
+    display: flex;
+    justify-content: space-around;
+    color: #FFFFFF;
+    margin-top: 2rem;
+}
+
+.user__balance__currency__balance,
+.user__balance__currency {
+    font-size: 3rem;
+}
+
+.user__balance__currency {
+    position: relative;
+}
+
+.user__balance__currency__full {
+    position: absolute;
+    bottom: -1rem;
+    left: 0.3rem;
+    font-size: 1rem;
+}
+
+.user__activity__first__months__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+}
+
+
+.user__activity__month__active__days,
+.user__activity__month {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.user__activity {
+    overflow-y: scroll;
+}
+
+.user__activity::-webkit-scrollbar {
+    display: none;
+}
+
+.user__activity__first__months hr {
+    width: 80%;
+    margin: 0.2rem auto;
+}
