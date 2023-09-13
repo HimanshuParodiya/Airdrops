@@ -27,7 +27,7 @@ li {
 }
 
 /* --------------------------------------------------------------       Navbar */
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,7 +85,7 @@ nav .logo img {
 
 .navbar__back__button a {
     color: #FFFFFF;
-}
+} */
 
 /* --------------------------------------------------------------            Main */
 
@@ -93,7 +93,6 @@ nav .logo img {
     max-width: 120rem;
     margin: 0 auto;
     text-align: center;
-    margin-top: 10rem;
 }
 
 
@@ -112,7 +111,6 @@ nav .logo img {
     border-top-left-radius: 5rem;
     padding-left: 2rem;
     font-size: 2rem;
-    border: 1px solid #000;
     border-right: 0;
 }
 
@@ -125,7 +123,7 @@ nav .logo img {
     background: #F89E52;
     border-bottom-right-radius: 5rem;
     border-top-right-radius: 5rem;
-    border: 1px solid #000;
+    cursor: pointer;
 }
 
 .search__button i {
@@ -213,7 +211,7 @@ nav .logo img {
 }
 
 .user__balance__activity__underline {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 1rem;
 }
@@ -222,7 +220,7 @@ nav .logo img {
     display: flex;
     justify-content: space-around;
     color: #FFFFFF;
-    margin-top: 2rem;
+    margin: 2rem;
 }
 
 .user__balance__currency__balance,
@@ -241,31 +239,48 @@ nav .logo img {
     font-size: 1rem;
 }
 
-.user__activity__first__months__row {
+/* .user__activity__first__months__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8rem;
-}
+} */
 
 
-.user__activity__month__active__days,
 .user__activity__month {
-    margin-top: 1rem;
     font-size: 1.8rem;
     color: #FFFFFF;
-    text-align: left;
 }
 
-.user__activity {
-    overflow-y: scroll;
+.user__activity__month__active__days {
+    font-size: 1.3rem;
+    color: #FFFFFF;
 }
 
-.user__activity::-webkit-scrollbar {
-    display: none;
-}
 
-.user__activity__first__months hr {
+
+/* .user__activity__first__months hr {
     width: 80%;
     margin: 0.2rem auto;
+} */
+
+.user__activity__months {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.user__activity__month__container {
+    box-shadow: 3px 2px 10px #000;
+    cursor: pointer;
+    transition: all 0.255s;
+
+}
+
+.user__activity__month__container:hover {
+    box-shadow: 6px 4px 15px #000;
+
 }
