@@ -93,17 +93,21 @@ nav .logo img {
     max-width: 120rem;
     margin: 0 auto;
     text-align: center;
+    padding: 2.4rem;
 }
 
 
-.seachbar {
+.search_bar {
     height: 5rem;
     position: relative;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
 
 }
 
-.seachbar input {
-    width: 80%;
+.search_bar input {
+    flex: 0.9;
     height: 100%;
     outline: none;
     border: none;
@@ -112,18 +116,26 @@ nav .logo img {
     padding-left: 2rem;
     font-size: 2rem;
     border-right: 0;
+    border: 2px solid #3482FF;
 }
 
+
 .search__button {
+    flex: 0.1;
     margin-left: -0.23rem;
     height: 100%;
-    width: 10%;
     outline: none;
     border: none;
-    background: #F89E52;
+    background: #3482FF;
     border-bottom-right-radius: 5rem;
     border-top-right-radius: 5rem;
     cursor: pointer;
+    border: 2px solid #3482FF;
+    border-left: none;
+}
+
+.search__button:hover {
+    background-color: #F89E52;
 }
 
 .search__button i {
@@ -152,13 +164,17 @@ nav .logo img {
 .userData {
     /* width: 80%; */
     margin: 5rem auto;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    justify-content: space-around;
+    border: 1px solid red;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
 .userData__container {
-    flex: 0.3;
+    /* flex: 0.3; */
     height: 20rem;
     border-radius: 2rem;
     background-color: #49494A;
@@ -168,7 +184,7 @@ nav .logo img {
 }
 
 .userData__heading {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #FFFFFF;
 }
 
@@ -188,23 +204,26 @@ nav .logo img {
 /* ------------- user balance activity */
 
 .user__balance__activity {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.user__balance__activity {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
 }
 
 
 .user__balance__activity__box {
     background-color: #49494A;
-    flex: 0.45;
+    /* flex: 0.45; */
     border-radius: 2rem;
     padding: 0 1rem 2rem 1rem;
 }
 
-.user__balance {
-    height: 250px;
-}
 
 .user__balance__activity__heading {
     font-size: 2.4rem;
@@ -220,11 +239,11 @@ nav .logo img {
     margin-top: 1rem;
 }
 
-.user__balance__currency_conatiner {
+.user__balance__currency_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #FFFFFF;
-    margin: 2rem;
+    margin: 2rem 4rem;
 }
 
 .user__balance__currency__balance,
@@ -286,5 +305,322 @@ nav .logo img {
 
 .user__activity__month__container:hover {
     box-shadow: 6px 4px 15px #000;
+
+}
+
+
+/* -------------------------------------------------- Media Query 600 */
+
+@media only screen and (max-width : 600px) {
+    .container {
+        padding: 2.4rem;
+        height: 100%;
+    }
+
+    .search_bar {
+        width: 90%;
+    }
+
+    .search_bar input {
+        flex: 0.8;
+        width: 100%;
+    }
+
+    .search__button {
+        flex: 0.2;
+    }
+
+    .search__button i {
+        margin-left: 2rem;
+    }
+
+    /* -------------   account */
+
+    .account__data {
+        margin-top: 5rem;
+        font-size: 2.2rem;
+        margin: 2.4rem auto 0 auto;
+        padding: 1.6rem 0;
+
+    }
+
+
+    /* -------------   user Data */
+
+    .userData {
+        margin: 3rem auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .userData__container {
+        height: 15rem;
+    }
+
+    .userData__heading {
+        font-size: 2rem;
+        color: #FFFFFF;
+    }
+
+    .userData__data {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .userData_data_currency {
+        color: #FFFFFF;
+        margin-right: 0rem;
+    }
+
+    /* ------------- user balance activity */
+
+    .user__balance__activity {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .user__balance__activity__box {
+        background-color: #49494A;
+    }
+
+    .user__balance__activity__heading {
+        font-size: 2rem;
+        margin-top: 2%;
+
+    }
+
+    .user__balance__currency__balance,
+    .user__balance__currency {
+        font-size: 2rem;
+    }
+
+    .user__balance__currency__full {
+        left: 0rem;
+
+    }
+
+    .user__activity__month {
+        font-size: 1.4rem;
+    }
+
+    .user__activity__month__active__days {
+        font-size: 1.1rem;
+    }
+
+
+
+}
+
+
+
+/* -------------------------------------------------- Media Query TAB */
+
+@media (min-width : 601px) and (max-width : 768px) {
+    .container {
+        padding: 2.4rem;
+        height: 100%;
+    }
+
+    .search_bar {
+        width: 80%;
+    }
+
+    .search_bar input {
+        flex: 0.8;
+        width: 100%;
+
+    }
+
+    .search__button {
+        flex: 0.2;
+    }
+
+    .search__button i {
+        margin-left: 3.4rem;
+    }
+
+    /* -------------   account */
+
+    .account__data {
+        margin-top: 5rem;
+        font-size: 2.5rem;
+        margin: 2.4rem auto 0 auto;
+        padding: 1.6rem 0;
+
+    }
+
+
+    /* -------------   user Data */
+
+    .userData {
+        margin: 3rem auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .userData__container {
+        height: 15rem;
+    }
+
+    .userData__heading {
+        font-size: 2rem;
+        color: #FFFFFF;
+    }
+
+    .userData__data {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .userData_data_currency {
+        color: #FFFFFF;
+        margin-right: 0rem;
+    }
+
+    /* ------------- user balance activity */
+
+    .user__balance__activity {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .user__balance__activity__box {
+        background-color: #49494A;
+    }
+
+    .user__balance__activity__heading {
+        font-size: 2rem;
+        margin-top: 2%;
+
+    }
+
+    .user__balance__currency__balance,
+    .user__balance__currency {
+        font-size: 2rem;
+    }
+
+    .user__balance__currency__full {
+        left: 0rem;
+
+    }
+
+    .user__activity__month {
+        font-size: 1.4rem;
+    }
+
+    .user__activity__month__active__days {
+        font-size: 1.1rem;
+    }
+
+
+
+}
+
+/* -------------------------------------------------- Media Query laptop */
+
+@media (min-width : 769px) and (max-width : 1024px) {
+    .container {
+        padding: 2.4rem;
+        height: 100%;
+    }
+
+    .search_bar {
+        width: 80%;
+    }
+
+    .search_bar input {
+        flex: 0.8;
+        width: 100%;
+
+    }
+
+    .search__button {
+        flex: 0.2;
+    }
+
+    .search__button i {
+        margin-left: 5rem;
+    }
+
+    /* -------------   account */
+
+    .account__data {
+        margin-top: 5rem;
+        font-size: 2.8rem;
+        margin: 2.4rem auto 0 auto;
+        padding: 1.6rem 0;
+
+    }
+
+
+    /* -------------   user Data */
+
+    .userData {
+        margin: 3rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .userData__container {
+        height: 15rem;
+    }
+
+    .userData__heading {
+        font-size: 2.6rem;
+        color: #FFFFFF;
+    }
+
+    .userData__data {
+        font-size: 2.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .userData_data_currency {
+        color: #FFFFFF;
+        margin-right: 0rem;
+    }
+
+    /* ------------- user balance activity */
+
+    .user__balance__activity {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .user__balance__activity__box {
+        background-color: #49494A;
+    }
+
+    .user__balance__activity__heading {
+        font-size: 2.2rem;
+        margin-top: 2%;
+
+    }
+
+    .user__balance__currency__balance,
+    .user__balance__currency {
+        font-size: 2.5rem;
+    }
+
+    .user__balance__currency__full {
+        left: 0rem;
+
+    }
+
+    .user__activity__month {
+        font-size: 1.6rem;
+    }
+
+    .user__activity__month__active__days {
+        font-size: 1.2rem;
+    }
+
+
 
 }
